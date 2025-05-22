@@ -1,59 +1,217 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en" class="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Split-Screen Website</title>
-  <link rel="stylesheet" href="styles.css" type="text/css" media="all" />
-  <script src="main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design & Code | Creative Digital Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    },
+                    screens: {
+                        'xs': '480px',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js" charset="utf-8"></script>
 </head>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+<div class="flex flex-col md:flex-row min-h-screen pt-20 md:pt-24">
+        <!-- Left Side: Design -->
+        <div class="w-full md:w-1/2 p-6 xs:p-8 md:p-16 bg-white dark:bg-gray-800 transition-all duration-300 hover:bg-gray-50 dark:hover:bg-gray-700">
+            <div class="h-full flex flex-col justify-between space-y-8 md:space-y-0">
+                <div class="space-y-6 md:space-y-8">
+                    <h1 class="text-4xl xs:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white opacity-0 translate-y-5">
+                        DESIGN
+                    </h1>
+                    <p class="text-lg xs:text-xl text-gray-600 dark:text-gray-300 opacity-0 translate-y-5">
+                        Crafting stunning visuals & intuitive interfaces.
+                    </p>
+                    <a href="#" class="inline-flex items-center w-full md:w-auto justify-center px-6 xs:px-8 py-3 xs:py-4 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 rounded-full hover:bg-gray-700 dark:hover:bg-gray-300 transition-all duration-300 opacity-0 translate-y-5">
+                        Explore Our Work
+                        <i class="fas fa-arrow-right ml-3 xs:ml-4 transition-transform duration-300 group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+                
+                <ul class="space-y-3 xs:space-y-4 opacity-0">
+                    <li class="flex items-center px-4 xs:px-6 py-2 xs:py-3 bg-gray-100/50 dark:bg-gray-700/50 rounded-full text-base xs:text-lg md:text-base text-gray-700 dark:text-gray-300 transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-600">
+                        <i class="fas fa-pen-fancy mr-3 xs:mr-4 text-gray-500 dark:text-gray-400"></i>
+                        UI/UX Design
+                    </li>
+                    <li class="flex items-center px-4 xs:px-6 py-2 xs:py-3 bg-gray-100/50 dark:bg-gray-700/50 rounded-full text-base xs:text-lg md:text-base text-gray-700 dark:text-gray-300 transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-600">
+                        <i class="fas fa-palette mr-3 xs:mr-4 text-gray-500 dark:text-gray-400"></i>
+                        Brand Identity
+                    </li>
+                    <li class="flex items-center px-4 xs:px-6 py-2 xs:py-3 bg-gray-100/50 dark:bg-gray-700/50 rounded-full text-base xs:text-lg md:text-base text-gray-700 dark:text-gray-300 transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-600">
+                        <i class="fas fa-mobile-alt mr-3 xs:mr-4 text-gray-500 dark:text-gray-400"></i>
+                        Mobile Apps
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-<body>
-  <nav class="navbar">
-    <a href="#" class="logo">SplitScreen</a>
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+        <!-- Right Side: Code -->
+        <div class="w-full md:w-1/2 p-6 xs:p-8 md:p-16 bg-gray-100 dark:bg-gray-850 transition-all duration-300 hover:bg-gray-200 dark:hover:bg-gray-700">
+            <div class="h-full flex flex-col justify-between space-y-8 md:space-y-0">
+                <div class="space-y-6 md:space-y-8">
+                    <h1 class="text-4xl xs:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white opacity-0 translate-y-5">
+                        CODE
+                    </h1>
+                    <p class="text-lg xs:text-xl text-gray-600 dark:text-gray-300 opacity-0 translate-y-5">
+                        Building performant, scalable digital experiences.
+                    </p>
+                    <a href="#" class="inline-flex items-center w-full md:w-auto justify-center px-6 xs:px-8 py-3 xs:py-4 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 rounded-full hover:bg-gray-700 dark:hover:bg-gray-300 transition-all duration-300 opacity-0 translate-y-5">
+                        View Our Projects
+                        <i class="fas fa-arrow-right ml-3 xs:ml-4 transition-transform duration-300 group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+                <ul class="space-y-3 xs:space-y-4 opacity-0">
+                    <li class="flex items-center px-4 xs:px-6 py-2 xs:py-3 bg-gray-200/50 dark:bg-gray-700/50 rounded-full text-base xs:text-lg md:text-base text-gray-700 dark:text-gray-300 transition-all duration-300 hover:bg-gray-200 dark:hover:bg-gray-600">
+                        <i class="fas fa-code mr-3 xs:mr-4 text-gray-500 dark:text-gray-400"></i>
+                        Web Development
+                    </li>
+                    <li class="flex items-center px-4 xs:px-6 py-2 xs:py-3 bg-gray-200/50 dark:bg-gray-700/50 rounded-full text-base xs:text-lg md:text-base text-gray-700 dark:text-gray-300 transition-all duration-300 hover:bg-gray-200 dark:hover:bg-gray-600">
+                        <i class="fas fa-server mr-3 xs:mr-4 text-gray-500 dark:text-gray-400"></i>
+                        Backend Systems
+                    </li>
+                    <li class="flex items-center px-4 xs:px-6 py-2 xs:py-3 bg-gray-200/50 dark:bg-gray-700/50 rounded-full text-base xs:text-lg md:text-base text-gray-700 dark:text-gray-300 transition-all duration-300 hover:bg-gray-200 dark:hover:bg-gray-600">
+                        <i class="fas fa-cogs mr-3 xs:mr-4 text-gray-500 dark:text-gray-400"></i>
+                        API Integrations
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <ul class="nav-links">
-      <li><a href="#apple">Apple</a></li>
-      <li><a href="#banana">Banana</a></li>
-    </ul>
-  </nav>
-  
-  <main>
-    <div class="left-panel" id="apple">
-      <h1>Apple</h1>
-      <img src="images/apple.jpg" alt="Aplle Picture" />
-      <p>
-        Apples are lower in calories, higher in fiber and antioxidants, and can contribute to satiety and digestive health.
-      </p>
-      <h2>Vitamins</h2>
-      <p>The main vitamin composition of apples per 100g is as follows:</p>
-      <ul>
-        <li>Vitamin C: 4.6mg</li>
-        <li>Folate: 2.2mcg</li>
-        <li>Vitamin A: 54IU
-        </li>
-      </ul>
+
+   <!-- Navigation -->
+<nav class="fixed top-4 xs:top-6 left-1/2 -translate-x-1/2 p-3 xs:p-4 backdrop-blur-sm bg-white/80 dark:bg-gray-800/80 shadow-lg rounded-full flex justify-between items-center w-[95%] xs:w-[90%] max-w-6xl opacity-0 z-50">
+    <a href="#" class="text-lg xs:text-xl font-bold text-gray-900 dark:text-white">DESIGN & CODE</a>
+    <div class="flex items-center gap-3 xs:gap-4 md:gap-6">
+        <!-- Desktop Navigation (hidden on mobile) -->
+        <div class="hidden xs:flex items-center gap-3 xs:gap-4 md:gap-6">
+            <a href="#" class="text-sm xs:text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">Work</a>
+            <a href="#" class="text-sm xs:text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">Services</a>
+            <a href="#" class="text-sm xs:text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">About</a>
+            <a href="#" class="text-sm xs:text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">Contact</a>
+        </div>
+        
+        <!-- Mobile Hamburger Button (visible only on mobile) -->
+        <button id="mobile-menu-button" class="xs:hidden p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-300">
+            <i class="fas fa-bars text-gray-600 dark:text-gray-300"></i>
+        </button>
+        
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-300">
+            <i class="fas fa-moon text-sm xs:text-base text-gray-600 dark:text-gray-300"></i>
+        </button>
     </div>
-    
-    <div class="right-panel" id="banana">
-      <h1>Banana</h1>
-      <img src="images/banana.jpg" alt="Banana picture" />
-      <p> Bananas are higher in potassium, carbohydrates, and calories, making them a good source of energy for pre-workout snacks or quick energy boosts.</p>
-      <h2>Vitamins</h2>
-      <p>The main vitamin composition of bananas per 100g is as follows:</p>
-      <ul>
-        <li>Vitamin C: 8.7mg</li>
-        <li>Folate: 20mcg</li>
-        <li>Vitamin A: 64IU
-        </li>
-      </ul>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg z-40 hidden transition-opacity duration-300">
+    <div class="absolute top-4 right-4 p-3">
+        <button id="mobile-menu-close" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+            <i class="fas fa-times text-2xl text-gray-600 dark:text-gray-300"></i>
+        </button>
     </div>
-  </main>
+    <div class="flex flex-col items-center justify-center h-full space-y-8 px-4">
+        <a href="#" class="text-3xl font-medium text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300">Work</a>
+        <a href="#" class="text-3xl font-medium text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300">Services</a>
+        <a href="#" class="text-3xl font-medium text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300">About</a>
+        <a href="#" class="text-3xl font-medium text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300">Contact</a>
+    </div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // GSAP Animations
+            gsap.defaults({ ease: "power3.out" });
+            
+            const animateElements = [
+                ...document.querySelectorAll('h1'),
+                ...document.querySelectorAll('p'),
+                ...document.querySelectorAll('a.btn'),
+                ...document.querySelectorAll('ul')
+            ];
+
+            gsap.to(animateElements, {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                stagger: 0.15
+            });
+
+            gsap.to('nav', {
+                opacity: 1,
+                duration: 1,
+                delay: 0.5
+            });
+
+            // Theme Toggle
+            const themeToggle = document.getElementById('theme-toggle');
+            const currentTheme = localStorage.getItem('theme');
+            
+            if (currentTheme === 'dark') {
+                document.documentElement.classList.add('dark');
+                themeToggle.innerHTML = '<i class="fas fa-sun text-gray-300"></i>';
+            }
+
+            themeToggle.addEventListener('click', () => {
+                document.documentElement.classList.toggle('dark');
+                if (document.documentElement.classList.contains('dark')) {
+                    localStorage.setItem('theme', 'dark');
+                    themeToggle.innerHTML = '<i class="fas fa-sun text-gray-300"></i>';
+                } else {
+                    localStorage.setItem('theme', 'light');
+                    themeToggle.innerHTML = '<i class="fas fa-moon text-gray-600"></i>';
+                }
+            });
+
+            // Mobile-friendly hover handling
+            const isTouchDevice = () => {
+                return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            };
+
+            if (!isTouchDevice()) {
+                document.querySelectorAll('.split-left, .split-right').forEach(section => {
+                    section.addEventListener('mousemove', (e) => {
+                        const rect = section.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        gsap.to(section, {
+                            rotationY: (x - rect.width/2)/20,
+                            rotationX: -(y - rect.height/2)/20,
+                            transformPerspective: 1000,
+                            duration: 0.3
+                        });
+                    });
+                    
+                    section.addEventListener('mouseleave', () => {
+                        gsap.to(section, {
+                            rotationY: 0,
+                            rotationX: 0,
+                            duration: 0.5
+                        });
+                    });
+                });
+            }
+        });
+    </script>
 </body>
-
 </html>
